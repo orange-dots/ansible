@@ -1,0 +1,25 @@
+---
+- name: full update && full upgrade
+  hosts: all
+  remote_user: ansible
+  become: yes
+
+  tasks:
+    - name: Full system upgrade for Debian flavor
+      apt:
+        update_cache: yes
+        upgrade: yes
+      when: (ansible_facts['os_family'] == "Debian")
+
+    - name: Full system upgrade for RHEL flavor
+      yum:
+        update_cache: yes
+        name: '*'
+        state: latest
+      when: (ansible_facts['os_family'] == "RedHat")
+
+    - name: Full system upgrade for Arch flavor
+      pacman:
+        update_cache: yes
+        upgrade: yes
+      when: (ansible_facts['os_family'] == "Archlinux")

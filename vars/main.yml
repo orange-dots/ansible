@@ -1,0 +1,12 @@
+users:
+  - username: entropy
+    uid: 1001
+    users_group: wheel
+    shell: /bin/bash
+
+security_sudoers_passworded:
+  - entropy
+
+security_sudoers_passwordless:
+  - ansible
+  - backup

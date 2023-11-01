@@ -1,0 +1,24 @@
+# file: hosts
+[clients]
+ellie
+anna
+henriette
+wintermute
+
+[servers]
+ygritte
+
+[vServers]
+vl-b-debian01
+vl-d-debian01
+vl-t-debian01
+vl-p-debian01
+vl-b-proxmox-sa01
+
+[vclients]
+vl-b-fedora-workstation01
+vl-t-fedora-workstation01
+vl-p-fedora-workstation01
+vl-p-kali01
+
+[servers]
